@@ -2,7 +2,7 @@ import "./about.css";
 
 export const about = () => {
   return `
-<div class="about">
+<div class="about" id="about">
 <div class="img-about">
 <img src="img/aboutfoto2.jpg">
 <h2>ABOUT   US</h2>

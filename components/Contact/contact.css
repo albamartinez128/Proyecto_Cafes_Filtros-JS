@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+.contacto{
+    background-image: url("/img/foto5.jpg");
+    margin-bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter:brightness(0.6);
+    padding: 30px;
+    
+}
+
+.contacto .contact-titulo{
+    color: #583a35;
+    font-family: Lobster, sans-serif ;
+    padding-top: 30px;
+    font-weight: 800;
+    text-align: center;
+
+}
+    
+.horario-apertura-cuerpo li {
+    display: block;
+    text-align: left;
+  font-weight: 500;
+  font-size: 20px;
+color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  
+}
+
+.contacto .contact-titulo:nth-of-type(2){
+    font-size: 70px;
+}
+
+.contact-titulo{
+    display: flex;
+    color: white;
+    justify-content: center;
+    font-family:Lobster, sans-serif ;
+    color: rgb(255, 255, 255);
+    border-bottom: 5px solid ;
+    width: 40%;
+    margin: 0 auto;
+}
+
+
+
+
+.direccion-titulo{
+    font-family:Lobster, sans-serif; ;
+}
+
+.direccion{
+   font-size: 18px;
+   margin-bottom: 60px;
+}
+
+.telefono-titulo{
+    font-family:Lobster, sans-serif; ;
+}
+.contacto ul li {
+    list-style: none;
+    /* border-bottom: 1px solid black; */
+}
+
+.horario-apertura{
+    color: black;
+    
+}
+
+.horario-apertura-cuerpo li{
+    display: block;
+}

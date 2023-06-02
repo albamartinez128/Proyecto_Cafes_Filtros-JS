@@ -1,0 +1,45 @@
+/* Estilos de tarjeta de café */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 25rem;
+    padding: 1rem;
+    margin: 0 auto;
+    transition: all 0.5s ease-in;
+}
+
+.card-img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    object-fit: cover;
+    max-width: 25rem;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    margin: 0 auto;
+    /* align-items: center; */
+}
+
+.card:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.card:hover .card-img img{
+    transform: scale(1.1);
+    transition: all 0.5s ease-in;
+}

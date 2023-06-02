@@ -1,0 +1,81 @@
+
+.equipo{
+    position: relative;
+    background-image: url("/img/fotoequipo.jpg");
+    padding-top: 50px;
+}
+.img_equipo img{
+height: 400px;
+width: 100%;
+
+}
+
+.texto_equipo{
+    display: flex;
+    color:aliceblue;
+    font-weight: 600px;
+    font-size: 40px;
+    text-align: center;
+    justify-content: center;
+    font-family:  Lobster, sans-serif;
+    z-index: 10;
+
+}
+
+
+.person_equipo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.person_equipo div{
+    text-align: center;
+    margin: 20px;
+}
+
+.person_equipo img{
+    height: 200px;
+    display: block;
+    border: 2px solid antiquewhite;
+    border-radius: 20px;
+    
+
+}
+
+.person_equipo p{
+    text-align: center;
+    color: azure;
+}
+
+.custom-shape-divider-top-1684840109 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+
+
+@media screen and (min-width:768px) {
+    .texto_equipo{
+        left: 750px;
+
+    }
+
+    .person_equipo{
+        flex-direction: row;
+        justify-content: center;
+        gap:100px;
+        margin-top: 40px;
+
+    }
+
+
+    }
+    
+       

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+footer {
+    font-family: Lobster, sans-serif;
+    background-image: url("/img/restaurante.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-color: #141007;
+    text-align: center;
+    opacity: 0.8;
+    display: inline-block;
+    width: 100%;
+    color: white;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .sombra {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0,0.5);
+    z-index: -1;
+  }
+
+  .titulo-texto h1 {
+  display: flex;
+    font-family: Lobster, sans-serif;
+    width: 100%;
+    color: rgb(233, 228, 231);
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 30px;
+    
+  }
+
+  .menu-footer{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-footer ul {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+    
+    
+  }
+
+
+  
+ .menu-footer ul li a {
+    color: rgba(193, 173, 173, 0.737);
+    text-decoration: none;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+  }
+  
+.redes-sociales{
+    display: flex;
+    list-style: none;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   margin-top: 30px;
+   margin-bottom: 30px;
+  
+  }
+
+  .redes-sociales img{
+    width:30px ;
+  }
+
+.redes-sociales ul{
+    display: flex; 
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+   
+}
+
+.redes-sociales ul li{
+  
+    display: flex;
+    margin: 0 10px; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .custom-shape-divider-top-1684840376 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1684840376 svg {
+    position: relative;
+    display: block;
+    width: calc(122% + 1.3px);
+    height: 24px;
+}
+
+.custom-shape-divider-top-1684840376 .shape-fill {
+    fill: #8B572A;
+}
+
+  @media screen and (min-width:768px) {
+    .menu-footer ul{
+flex-direction: row;
+gap: 40px;
+    }
+    .menu-footer ul li {
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out;
+      padding: 2px 6px;
+      margin-top: 60px;
+      
+    }
+       
+    }  
+

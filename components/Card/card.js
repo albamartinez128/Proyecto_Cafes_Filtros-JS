@@ -1,13 +1,13 @@
 import "./card.css";
 import { carrito } from "../..";
 import { cafes } from "../../data/cafes";
+
 function agregar(id) {
   let seleccion = cafes.find((cafe) => cafe.id == id);
   carrito.push(seleccion);
   document.getElementById("number-shop").innerHTML = carrito.length;
   console.log(carrito.length);
 }
-
 export const card = (cafe) => {
   return `
   <article class= "card">

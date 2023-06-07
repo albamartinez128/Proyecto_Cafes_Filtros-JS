@@ -7,7 +7,7 @@ import { cafes } from "./data/cafes";
 import { contact } from "./components/Contact/contact";
 import { about } from "./components/About/about";
 import { team } from "./components/Team/team";
-export const carrito = [];
+export let carrito = [];
 
 // Importar "./main.css";
 import "./index.css";
@@ -34,17 +34,17 @@ app.insertAdjacentHTML("beforeend", about());
 //Insertar el Team en el DOM
 app.insertAdjacentHTML("beforeend", team());
 
+// AÑADIR CARRITO DE COMPRA
+
 //FILTROS
 function filtrarIntensidad() {
   // Obtener todos los radios
+
   const radiosIntensidad = document.querySelectorAll("input[name=intensidad]");
   const radiosAroma = document.querySelectorAll("input[name=aroma]");
   const filtroPrecio = document.getElementById("buscar");
-
   // Obtener el contenedor de los cafés
   const cafeContainer = document.querySelector("#shop");
-
-  //Obtener el contenedor de About us
 
   // Variable para guardar el valor del radio seleccionado
   let intensidad = "";
@@ -67,6 +67,7 @@ function filtrarIntensidad() {
         .forEach((cafe) => {
           cafeContainer.innerHTML += card(cafe);
         });
+      funcionMostrarCafes();
     });
   });
   // Agregar un listener a cada radio
@@ -83,6 +84,7 @@ function filtrarIntensidad() {
         .forEach((cafe) => {
           cafeContainer.innerHTML += card(cafe);
         });
+      funcionMostrarCafes();
     });
   });
 
@@ -100,10 +102,10 @@ function filtrarIntensidad() {
       .forEach((cafe) => {
         cafeContainer.innerHTML += card(cafe);
       });
+
+    funcionMostrarCafes();
   });
 }
-
-filtrarIntensidad();
 
 //FILTRO Intensidad
 const intensidad = document.querySelector("#intensidad");
@@ -119,6 +121,7 @@ intensidad.addEventListener("change", () => {
   } else contenedor_intensidad.style.display = "none";
 });
 
+filtrarIntensidad();
 //FILTRO Precio
 const precio = document.querySelector("#precio");
 precio.addEventListener("change", () => {
@@ -143,7 +146,9 @@ aroma.addEventListener("change", () => {
     contenedor_aroma.style.display = "block";
     contenedor_intensidad.style.display = "none";
     contenedor_precio.style.display = "none";
-  } else contenedor_aroma.style.display = "none";
+  } else {
+    contenedor_aroma.style.display = "none";
+  }
 });
 
 //LIMPIAR FILTROS
@@ -157,17 +162,27 @@ function limpiarFiltros() {
   precio.value = "";
   const todosloscafes = cafes.map((cafe) => `${card(cafe)}`).join("");
   cafeContainer.innerHTML = todosloscafes;
+  document.querySelector(".intensidad_selector").style.display = "none";
+  document.querySelector(".aroma_selector").style.display = "none";
+  document.querySelector(".precio_selector").style.display = "none";
+  const filtrointensidad = document.querySelector("#intensidad");
+  const filtroaroma = document.querySelector("#aroma");
+  const filtroprecio = document.getElementById("precio");
+  filtrointensidad.checked = false;
+  filtroaroma.checked = false;
+  filtroprecio.checked = false;
 }
 
 const botonlimpiar = document.querySelector("#limpiar");
 botonlimpiar.addEventListener("click", limpiarFiltros);
 
-// AÑADIR CARRITO DE COMPRA
-
-const carrito_shop = document.querySelectorAll(".carrito_shop");
-carrito_shop.forEach((element) => {
-  element.addEventListener("click", () => {
-    const numeroCarrito = document.getElementById("number-shop");
-    numeroCarrito.innerText = parseInt(numeroCarrito.innerText) + 1;
+function funcionMostrarCafes() {
+  const carrito_shop = document.querySelectorAll(".carrito_shop");
+  carrito_shop.forEach((element) => {
+    element.addEventListener("click", () => {
+      const numeroCarrito = document.getElementById("number-shop");
+      numeroCarrito.innerText = parseInt(numeroCarrito.innerText) + 1;
+    });
   });
-});
+}
+funcionMostrarCafes();

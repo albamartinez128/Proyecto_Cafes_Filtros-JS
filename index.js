@@ -34,9 +34,6 @@ app.insertAdjacentHTML("beforeend", about());
 //Insertar el Team en el DOM
 app.insertAdjacentHTML("beforeend", team());
 
-// AÑADIR CARRITO DE COMPRA
-
-//FILTROS
 function filtrarIntensidad() {
   // Obtener todos los radios
 
@@ -175,6 +172,8 @@ function limpiarFiltros() {
 
 const botonlimpiar = document.querySelector("#limpiar");
 botonlimpiar.addEventListener("click", limpiarFiltros);
+
+// AÑADIR CARRITO DE COMPRA
 
 function funcionMostrarCafes() {
   const carrito_shop = document.querySelectorAll(".carrito_shop");
